@@ -1,0 +1,211 @@
+:root {
+  font-size: 16px;
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  max-width: 480px;
+  padding: 0;
+  background: #f7f7fb;
+  color: #1f2430;
+}
+
+.hero {
+  padding: 16px 20px 4px 20px;
+  background: linear-gradient(120deg, #131c46, #3448d8);
+  color: #fff;
+}
+
+.hero h1 {
+  margin: 8px 0 6px;
+  font-size: 1.35rem;
+}
+
+.hero .subhead {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+main {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 57, 0.08);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #6a7187;
+}
+
+.text-btn {
+  border: none;
+  background: transparent;
+  color: #4d6bff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.app-list,
+.workflow-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-card,
+.workflow-card {
+  border: 1px solid #e1e4ef;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.app-card__name {
+  font-weight: 600;
+}
+
+.app-card__url {
+  font-size: 0.8rem;
+  color: #6a7187;
+}
+
+button.primary {
+  border: none;
+  border-radius: 999px;
+  background: #4d6bff;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(77, 107, 255, 0.2);
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+
+button.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(77, 107, 255, 0.25);
+}
+
+.secondary {
+  border: 1px solid #d4d8ea;
+  background: #f6f7fd;
+  color: #1f2430;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #41465b;
+}
+
+.field input {
+  margin-top: 4px;
+  border-radius: 8px;
+  border: 1px solid #cfd5eb;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 12px;
+}
+
+.inline-fields .field {
+  flex: 1;
+}
+
+.toast {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2430;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.toast.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f1321;
+    color: #f6f6fc;
+  }
+
+  section {
+    background: #14182a;
+    box-shadow: none;
+    border: 1px solid #232847;
+  }
+
+  .app-card,
+  .workflow-card {
+    border-color: #242942;
+  }
+
+  .field input {
+    background: #101427;
+    border-color: #242942;
+    color: #fff;
+  }
+}

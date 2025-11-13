@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FloatBrowser POC</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">FloatBrowser prototype</p>
+        <h1>Launch floating workspaces in two clicks</h1>
+        <p class="subhead">
+          Quick-launch your essential web apps inside distraction-free pop-up windows.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="section-heading">
+          <h2>Pinned web apps</h2>
+          <button id="resetApps" class="text-btn" type="button">Reset to defaults</button>
+        </div>
+        <ul id="appList" class="app-list"></ul>
+      </section>
+
+      <section class="workflow-section">
+        <div class="section-heading">
+          <h2>Workflows</h2>
+          <span class="hint">Launch multiple floating windows at once</span>
+        </div>
+        <ul id="workflowList" class="workflow-list"></ul>
+      </section>
+
+      <section>
+        <h2>Add a custom app</h2>
+        <form id="appForm">
+          <label class="field">
+            <span>Name</span>
+            <input id="appName" name="name" placeholder="My CRM" required />
+          </label>
+          <label class="field">
+            <span>URL</span>
+            <input
+              id="appUrl"
+              name="url"
+              type="url"
+              placeholder="https://example.com"
+              required
+            />
+          </label>
+          <div class="inline-fields">
+            <label class="field">
+              <span>Width</span>
+              <input id="appWidth" name="width" type="number" min="320" max="1800" placeholder="460" />
+            </label>
+            <label class="field">
+              <span>Height</span>
+              <input id="appHeight" name="height" type="number" min="400" max="1800" placeholder="720" />
+            </label>
+          </div>
+          <button type="submit" class="primary">Save app</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

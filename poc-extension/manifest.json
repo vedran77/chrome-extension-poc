@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "FloatBrowser POC",
+  "description": "Prototype that launches floating pop-up workspaces inspired by floatbrowser.app.",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FloatBrowser POC"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
+}
